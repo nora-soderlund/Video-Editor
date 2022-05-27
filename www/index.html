@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+		<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+
+		<title>Video Editor</title>
+
+		<link rel="stylesheet" href="styles/app.css">
+	</head>
+	<body>
+		<header>
+			<div id="header-title"></div>
+
+			<div id="header-buttons">
+				<div id="header-button-minimize" class="header-button"><i class="segoe-mdl2">&#xE921;</i></div>
+				<div id="header-button-maximize" class="header-button"><i class="segoe-mdl2">&#xE922;</i></div>
+				<div id="header-button-close" class="header-button header-button-caution"><i class="segoe-mdl2">&#xE8BB;</i></div>
+			</div>
+		</header>
+
+		<main>
+			<div id="main-grid">
+				<section id="main-files">
+					<div class="main-files-add">
+						<button id="main-files-add-button"><i class="segoe-mdl2 segoe-mdl2-button">&#59152;</i> Add video or sound</button>
+
+						<div class="main-files-add-selection">
+							<button><i class="segoe-mdl2">&#59151;</i></button>
+							<button><i class="segoe-mdl2">&#59213;</i></button>
+						</div>
+					</div>
+
+					<div class="main-files-container">
+						<div class="main-files-category main-files-videos">
+							<div class="main-files-category-header">Videos and pictures</div>
+
+							<div id="main-files-videos-content" class="main-files-category-content"></div>
+							<p id="main-files-videos-empty" class="active">You don't have any files added yet!</p>
+						</div>
+		
+						<div class="main-files-category main-files-sounds">
+							<div class="main-files-category-header">Sounds</div>
+
+							<div class="main-files-category-content">
+								<p>You don't have any files added yet!</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="main-video">
+					<div class="main-video-renderer">
+						<div class="main-video-renderer-player">
+		
+						</div>
+					</div>
+					
+					<div class="main-video-player">
+						<div class="main-video-player-button"><i class="segoe-mdl2">&#59538;</i></div>
+						<div class="main-video-player-button main-video-player-button-large"><i class="segoe-mdl2">&#59240;</i></div>
+						<div class="main-video-player-button"><i class="segoe-mdl2">&#59539;</i></div>
+					</div>
+				</section>
+
+				<section id="main-segments">
+					<div id="main-segments-content">
+						<canvas id="main-segments-canvas" width="0" height="0"></canvas>
+					</div>
+				</section>
+			</div>
+
+			<div id="main-overlay" class="active"></div>
+
+			<div id="main-projects" class="active">
+				<div class="main-projects-container">
+					<div id="main-projects-empty">You don't have any projects!</div>
+
+					<div id="main-projects-list"></div>
+
+					<div class="main-projects-new">
+						<input id="main-projects-new-name" type="text" placeholder="Project name">
+
+						<button id="main-projects-new-create">Create project</button>
+
+						<div id="main-projects-new-error"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="main-loader"></div>
+		</main>
+
+		<script type="text/javascript" src="scripts/header.js"></script>
+	</body>
+</html>
